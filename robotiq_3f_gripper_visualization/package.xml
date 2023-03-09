@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<package format="2">
+<package format="3">
   <name>robotiq_3f_gripper_visualization</name>
   <version>1.0.0</version>
   <description>robotiq</description>
@@ -8,7 +8,10 @@
   <url type="website">http://ros.org/wiki/robotiq</url>
   <author>Nicolas Lauzier (Robotiq inc.)</author>
 
-  <buildtool_depend>catkin</buildtool_depend>
-  <depend>urdf</depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <exec_depend>urdf</exec_depend>
 
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
 </package>

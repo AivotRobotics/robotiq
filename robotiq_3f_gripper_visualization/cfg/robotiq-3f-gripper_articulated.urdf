@@ -56,10 +56,10 @@ robotiq-3f-gripper_articulated - articulated version of the robotiq robotiq-3f-g
   </link>
   <link name="finger_1_link_2">
     <!--
-			NOTE: This link has an offset in the z-direction based on the models that were
-			used to generate grap-it poses.  With the offset below the model appears visually
-			correct, but it is suspect.
-			-->
+            NOTE: This link has an offset in the z-direction based on the models that were
+            used to generate grap-it poses.  With the offset below the model appears visually
+            correct, but it is suspect.
+            -->
     <visual>
       <origin rpy="0 0 0" xyz="0.039 0 0.0075"/>
       <geometry>
@@ -170,10 +170,10 @@ robotiq-3f-gripper_articulated - articulated version of the robotiq robotiq-3f-g
   </link>
   <link name="finger_2_link_2">
     <!--
-			NOTE: This link has an offset in the z-direction based on the models that were
-			used to generate grap-it poses.  With the offset below the model appears visually
-			correct, but it is suspect.
-			-->
+            NOTE: This link has an offset in the z-direction based on the models that were
+            used to generate grap-it poses.  With the offset below the model appears visually
+            correct, but it is suspect.
+            -->
     <visual>
       <origin rpy="0 0 0" xyz="0.039 0 0.0075"/>
       <geometry>
@@ -284,10 +284,10 @@ robotiq-3f-gripper_articulated - articulated version of the robotiq robotiq-3f-g
   </link>
   <link name="finger_middle_link_2">
     <!--
-			NOTE: This link has an offset in the z-direction based on the models that were
-			used to generate grap-it poses.  With the offset below the model appears visually
-			correct, but it is suspect.
-			-->
+            NOTE: This link has an offset in the z-direction based on the models that were
+            used to generate grap-it poses.  With the offset below the model appears visually
+            correct, but it is suspect.
+            -->
     <visual>
       <origin rpy="0 0 0" xyz="0.039 0 0.0075"/>
       <geometry>
