@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:macro name="robotiq_arg2f_140_model_ros2_control" params="
+        prefix
+        use_mock_hardware:=true
+        mock_sensor_commands:=true
+        initial_position:=0.0
+        ">
+        <ros2_control name="${prefix}robotiq_arg2f_140_model" type="system">
+            <hardware>
+                <xacro:if value="${use_mock_hardware}">
+                    <plugin>mock_components/GenericSystem</plugin>
+                    <param name="mock_sensor_commands">${mock_sensor_commands}</param>
+                    <param name="state_following_offset">0.0</param>
+                </xacro:if>
+                <xacro:unless value="${use_mock_hardware}">
+                    <plugin>mock_components/GenericSystem</plugin>
+                </xacro:unless>
+            </hardware>
+
+            <joint name="${prefix}finger_joint">
+                <command_interface name="position">
+                    <param name="min">0</param>
+                    <param name="max">0.7</param>
+                </command_interface>
+                <command_interface name="velocity">
+                    <param name="min">0</param>
+                    <param name="max">2.0</param>
+                </command_interface>
+                <state_interface name="position">
+                    <param name="initial_value">${initial_position}</param>
+                </state_interface>
+                <state_interface name="velocity">
+                    <param name="initial_value">0.0</param>
+                </state_interface>
+                <state_interface name="effort">
+                    <param name="initial_value">0.0</param>
+                </state_interface>
+            </joint>
+
+        </ros2_control>
+
+    </xacro:macro>
+
+</robot>
